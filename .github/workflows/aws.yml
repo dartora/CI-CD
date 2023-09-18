@@ -35,6 +35,7 @@ jobs:
           #who
           #cat ~/.ssh/id_rsa.pub
           git pull origin main
+          sudo rm -rf /var/www/html/*
           sudo cp -R * /var/www/html
           #restart
     

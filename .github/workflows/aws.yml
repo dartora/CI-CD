@@ -27,9 +27,9 @@ jobs:
         key: ${{ secrets.SSH_KEY }}
         script: |
           cd /home/ubuntu
-          cd CI-CD && git pull || git clone git@github.com:dartora/CI-CD.git  
+          cd CI-CD && git pull || git clone git@github.com:dartora/CI-CD.git && cd CI-CD
           sudo rm -rf /var/www/html/*
-          sudo cp -R CI-CD/* /var/www/html
+          sudo cp -R ./* /var/www/html
           #restart  
               
     - name: Remove Github Actions IP from security group

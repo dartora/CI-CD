@@ -27,7 +27,7 @@ jobs:
         key: ${{ secrets.SSH_KEY }}
         script: |
           cd /home/ubuntu
-          cd CI-CD && git pull | git clone git@github.com:dartora/CI-CD.git  
+          cd CI-CD && git pull || git clone git@github.com:dartora/CI-CD.git  
           sudo rm -rf /var/www/html/*
           sudo cp -R CI-CD/* /var/www/html
           #restart  

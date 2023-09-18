@@ -33,7 +33,7 @@ jobs:
           #git branch
           #who
           #cat ~/.ssh/id_rsa.pub
-          sudo git pull origin main
+          git pull origin main
           sudo cp -R * /var/www/html
           #restart
     

@@ -28,8 +28,9 @@ jobs:
         script: |
           cd /home/ubuntu/CI-CD
           ls
-          git branch
-          who
+          #git branch
+          #who
+          cat ~/.ssh/id_rsa.pub
           sudo git pull origin main
           sudo cp -R * /var/www/html
           #restart

@@ -27,6 +27,7 @@ jobs:
         key: ${{ secrets.SSH_KEY }}
         script: |
           cd /home/ubuntu/CI-CD
+          ls
           git pull origin main
           sudo cp -R * /var/www/html
           #restart

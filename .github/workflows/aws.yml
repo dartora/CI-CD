@@ -28,7 +28,7 @@ jobs:
         script: |
           cd /home/ubuntu/CI-CD
           ls
-          git pull origin main
+          sudo git pull origin main
           sudo cp -R * /var/www/html
           #restart
     

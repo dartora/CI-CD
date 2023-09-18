@@ -26,11 +26,13 @@ jobs:
         username: ubuntu
         key: ${{ secrets.SSH_KEY }}
         script: |
-          cd /home/ubuntu/CI-CD
+          cd /home/ubuntu
+          rm -rf ./CI-CD
+          git clone git@github.com:dartora/CI-CD.git && cd CI-CD
           ls
           #git branch
           #who
-          cat ~/.ssh/id_rsa.pub
+          #cat ~/.ssh/id_rsa.pub
           sudo git pull origin main
           sudo cp -R * /var/www/html
           #restart
